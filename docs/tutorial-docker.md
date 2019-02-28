@@ -132,23 +132,23 @@ $ docker run --rm -it \
 ## Step7. Report
 
 config.toml
-
+SQLite3Path is refered to the container path not to the host path, if you use the command above SQLite3Path should be "/vuls/cve.sqlite3"
 ```
 [cveDict]
 type = "sqlite3"
-SQLite3Path = "/path/to/cve.sqlite3"
+SQLite3Path = "/container/cve.sqlite3"
 
 [ovalDict]
 type = "sqlite3"
-SQLite3Path = "/path/to/oval.sqlite3"
+SQLite3Path = "/container/oval.sqlite3"
 
 [gost]
 type = "sqlite3"
-SQLite3Path = "/path/to/gost.sqlite3"
+SQLite3Path = "/container/gost.sqlite3"
 
 [exploit]
 type = "sqlite3"
-SQLite3Path = "/path/to/go-exploitdb.sqlite3"
+SQLite3Path = "/container/go-exploitdb.sqlite3"
 ```
 
 ```console
